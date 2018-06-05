@@ -1,0 +1,29 @@
+// Overview
+.overview {
+  display: flex;
+    &-heading {
+
+    }
+    &-stars {
+      // flex: 1;
+      margin-right: auto;
+    }
+    &-icon-star,
+    &-icon-location {
+      width: 1.75rem;
+      height: 1.75rem;
+      fill: $fuschia;
+    }
+    &-location {
+      
+    }
+    &-rating {
+
+    }
+    &-rating-average {
+
+    }
+    &-rating-count {
+
+    }
+}
