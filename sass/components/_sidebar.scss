@@ -1,4 +1,30 @@
+// Sidebar
 .sidebar {
   background: $darkestGrey;
   flex: 0 0 18%; // No Grow. No Shrink. 18%
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// Side-Nav
+.side-nav {
+    &-item {
+
+    }
+    &-link {
+
+    }
+    &-icon {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+}
+
+// Legal Text
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem;
+  color: $grey;
 }
