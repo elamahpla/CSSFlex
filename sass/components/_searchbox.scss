@@ -1,13 +1,47 @@
 // SEARCHBOX
 .search {
+  background: orangered;
+  flex: 0 0 40%; // No Shrink, No Grow, 40%
+  display: flex;
+  align-items: center;
+  justify-content: center;
     &-input {
-
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background: $lightestGrey;
+      border: none;
+      padding: .7rem 2rem;
+      border-radius: 10rem;
+      width: 90%;
+      transition: all .2s;
+      margin-right: -3.25rem;
+        &:focus {
+          outline: none;
+          width: 100%;
+          background: $lighterGrey;
+        }
+        &::-webkit-input-placeholder {
+          font-weight: 100;
+          color: $grey;
+        }
+    }
+    &-input:focus + &-button {
+        background: $lighterGrey;
     }
     &-button {
-      
+      border: none;
+      background: $lightestGrey;
+        &:focus {
+          outline: none;
+        }
+        &:active {
+          transform: translateY(.2rem);
+        }
     }
     &-icon {
       height: 2rem;
       width: 2rem;
+      fill: $darkGrey;
     }
 }
