@@ -1,0 +1,9 @@
+// Description
+.description {
+  font-size: 1.4rem;
+  flex: 0 0 60%; // No Grow, No Shrink, 60%
+  margin-right: 4.5rem;
+  background: $white;
+  box-shadow: $darkShadowOne;
+  padding: 3rem;
+}
