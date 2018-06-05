@@ -26,6 +26,13 @@ body {
   background: #fff;
   border-bottom: #f0eeee; }
 
+.logo {
+  height: 3.25rem; }
+
+.search-icon {
+  height: 2rem;
+  width: 2rem; }
+
 .sidebar {
   background: #333;
   flex: 0 0 18%; }
@@ -41,4 +48,5 @@ body {
   display: flex; }
 
 .hotel-view {
-  background: #fff; }
+  background: #fff;
+  flex: 1; }
