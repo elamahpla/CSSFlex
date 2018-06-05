@@ -1,3 +1,14 @@
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }
+
 * {
   margin: 0;
   padding: 0; }
@@ -21,11 +32,33 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh; }
 
+.btn-inline {
+  border: none;
+  color: #eb2f64;
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: .2rem;
+  display: inline-block;
+  background: transparent;
+  cursor: pointer;
+  transition: all .2s; }
+  .btn-inline:hover {
+    color: #333; }
+  .btn-inline:focus {
+    outline: none;
+    animation: pulsate 1s infinite; }
+
+.gallery {
+  display: flex; }
+  .gallery-photo {
+    width: 100%;
+    display: block; }
+
 .header {
   font-size: 1.4rem;
   height: 7rem;
   background: #fff;
-  border-bottom: #f0eeee;
+  border-bottom: 0.1rem solid #f0eeee;
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -33,6 +66,24 @@ body {
 .logo {
   height: 3.25rem;
   margin-left: 2rem; }
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.1rem solid #f0eeee; }
+  .overview-heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem; }
+  .overview-stars {
+    margin-right: auto;
+    display: flex; }
+  .overview-icon-star, .overview-icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: #eb2f64; }
 
 .search {
   flex: 0 0 40%;
@@ -95,14 +146,18 @@ body {
     width: .3rem;
     background: #eb2f64;
     transform: scaleY(0);
-    transition: transform 1s; }
-  .side-nav-item:hover::before {
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  .side-nav-item:hover::before, .side-nav-item-active::before {
     transform: scaleY(1);
     width: 100%; }
+  .side-nav-item:active::before {
+    background: #ff3366; }
   .side-nav-link:link, .side-nav-link:visited {
     color: #faf9f9;
     text-decoration: none;
     text-transform: uppercase;
+    z-index: 10;
+    position: relative;
     display: block;
     padding: 1.5rem 3rem;
     display: flex;
