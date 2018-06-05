@@ -8,5 +8,10 @@
 @import './base/typography';
 @import './base/utilities';
 // Components
+@import './components/header';
+@import './components/sidebar';
 // Layout
+@import './layout/container';
+@import './layout/content';
 // Pages
+@import './pages/home';
