@@ -8,4 +8,7 @@
   @media only screen and (max-width: $breakPointMedium) {
     padding: 3rem;
   }
+  @media only screen and (max-width: $breakPointSmall) {
+    flex-direction: column;
+  }
 }

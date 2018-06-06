@@ -4,6 +4,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: $breakPointSmallest) {
+    order: 1;
+    float: 0 0 100%; // No Shrink, No Grow, 100%
+    background: $lightestGrey;
+  }
     &-input {
       font-family: inherit;
       font-size: inherit;
