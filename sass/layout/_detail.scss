@@ -5,4 +5,7 @@
   padding: 4.5rem;
   background: $lightestGrey;
   border-bottom: $greyBorder;
+  @media only screen and (max-width: $breakPointMedium) {
+    padding: 3rem;
+  }
 }

@@ -4,4 +4,9 @@
   background: $lighterGrey;
   box-shadow: $darkShadow;
   min-height: 50rem;
+  @media only screen and (max-width: $breakPointLargest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }
