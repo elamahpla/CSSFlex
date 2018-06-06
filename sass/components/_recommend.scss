@@ -2,20 +2,21 @@
   font-size: 1.3rem;
   color: $darkGrey;
   display: flex;
-  &-count {
-
-  }
-  &-friends {
-
-  }
-  &-photo {
-    box-sizing: content-box;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 50%;
-    border: 3px solid $white;
-    &:not(:last-child) {
-      margin-right: -1.5rem;
+  align-items: center;
+    &-count {
+      margin-right: auto;
     }
-  }
+    &-friends {
+
+    }
+    &-photo {
+      box-sizing: content-box;
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      border: 3px solid $white;
+      &:not(:last-child) {
+        margin-right: -1.5rem;
+      }
+    }
 }
