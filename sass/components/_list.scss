@@ -16,12 +16,15 @@
       height: 1rem;
       width: 1rem;
       margin-right: .7rem;
-      // background-image: url(../img/chevron-thin-right.svg);
-      // background-size: cover;
-      background: $fuschia;
-      -webkit-mask-image: url(../img/chevron-thin-right.svg);
-      mask-image: url(../img/chevron-thin-right.svg);
-      -webkit-mask-size: cover;
-      mask-size: cover;
+      background-image: url(../img/chevron-thin-right.svg);
+      background-size: cover;
+      @supports(-webkit-mask-image: url()) or (mask-image: url()) {
+        background: $fuschia;
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-image: none;
+      }
     }
 }
