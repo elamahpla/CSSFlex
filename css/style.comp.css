@@ -36,7 +36,7 @@ body {
   border: none;
   color: #eb2f64;
   font-size: inherit;
-  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid #faf9f9;
   padding-bottom: .2rem;
   display: inline-block;
   background: transparent;
@@ -58,10 +58,33 @@ body {
   font-size: 1.4rem;
   height: 7rem;
   background: #fff;
-  border-bottom: 0.1rem solid #f0eeee;
+  border-bottom: 1px solid #faf9f9;
   display: flex;
   justify-content: space-between;
   align-items: center; }
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  border-bottom: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-wrap: wrap; }
+  .list-item {
+    flex: 0 0 50%;
+    margin-bottom: .7rem; }
+  .list-item::before {
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: .7rem;
+    background: #eb2f64;
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    mask-size: cover; }
 
 .logo {
   height: 3.25rem;
@@ -70,7 +93,7 @@ body {
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 0.1rem solid #f0eeee; }
+  border-bottom: 1px solid #faf9f9; }
   .overview-heading {
     font-size: 2.25rem;
     font-weight: 300;
@@ -84,6 +107,48 @@ body {
     width: 1.75rem;
     height: 1.75rem;
     fill: #eb2f64; }
+  .overview-location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center; }
+  .overview-icon-location {
+    margin-right: .5rem; }
+  .overview-rating {
+    background: #eb2f64;
+    color: #fff6f6;
+    margin-left: 3rem;
+    align-self: stretch;
+    padding: 0 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  .overview-rating-average {
+    font-size: 2.25rem;
+    flex-flow: 300;
+    margin-bottom: -3px; }
+  .overview-rating-count {
+    font-size: .8rem;
+    text-transform: uppercase; }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.recommend {
+  font-size: 1.3rem;
+  color: #777;
+  display: flex;
+  align-items: center; }
+  .recommend-count {
+    margin-right: auto; }
+  .recommend-photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff6f6; }
+    .recommend-photo:not(:last-child) {
+      margin-right: -1.5rem; }
 
 .search {
   flex: 0 0 40%;
@@ -220,7 +285,23 @@ body {
 .content {
   display: flex; }
 
+.description {
+  font-size: 1.4rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  background: #fff6f6;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  padding: 3rem; }
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background: #faf9f9;
+  border-bottom: 1px solid #faf9f9; }
+
+.user-reviews {
+  flex: 1; }
+
 .hotel-view {
   background: #fff6f6;
-  flex: 1;
-  height: 80rem; }
+  flex: 1; }

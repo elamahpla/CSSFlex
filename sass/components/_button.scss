@@ -9,8 +9,15 @@
   background: transparent;
   cursor: pointer;
   transition: all .2s;
+    & span {
+      margin-left: .3rem;
+      transition: margin-left .2s;
+    }
     &:hover {
       color: $darkestGrey;
+      span {
+        margin-left: .8rem;
+      }
     }
     &:focus {
       outline: none;
